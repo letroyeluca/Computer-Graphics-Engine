@@ -6,20 +6,6 @@
 
 #IncludeRegexTransform: 
 
-/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/easy_image.cc
-easy_image.h
-/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/easy_image.h
-algorithm
--
-assert.h
--
-math.h
--
-iostream
--
-sstream
--
-
 /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/easy_image.h
 stdint.h
 -
@@ -40,26 +26,6 @@ iostream
 stdexcept
 -
 string
--
-
-/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/ini_configuration.cc
-ini_configuration.h
-/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/ini_configuration.h
-algorithm
--
-cassert
--
-cctype
--
-exception
--
-functional
--
-iomanip
--
-memory
--
-sstream
 -
 
 /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/ini_configuration.h

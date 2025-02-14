@@ -7,12 +7,51 @@
 #include <string>
 
 
+img::EasyImage eRectangle(const ini::Configuration &conf){
+        int width = (conf["ImageProperties"]["width"].as_int_or_die());
+        int height = (conf["ImageProperties"]["height"].as_int_or_die());
+        img::EasyImage image(width,height);
+        for(unsigned int i = 0; i < width; i++){
+            for(unsigned int j = 0; j < height; j++){
+                image(i,j).red = i;
+                image(i,j).green = j;
+                image(i,j).blue = (i-j)%256;
+            }
+        }
+        return image;
+}
+
+img::EasyImage eBlocks(const ini::Configuration &conf){
+    int width = (conf["ImageProperties"]["width"].as_int_or_die());
+    int height = (conf["ImageProperties"]["height"].as_int_or_die());
+    img::EasyImage image(width,height);
+    for(unsigned int i = 0; i < width; i++){
+        for(unsigned int j = 0; j < height; j++){
+            image(i,j).red = i;
+            image(i,j).green = j;
+            image(i,j).blue = (i-j)%256;
+        }
+    }
+    return image;
+}
+
 
 img::EasyImage generate_image(const ini::Configuration &configuration)
 {
-    
-	return img::EasyImage();
+    // choose ini file
+    std::ifstream fin("Intro1_ColorRectangle.ini");
+    ini::Configuration conf(fin);
+
+    if(conf["General"]["type"].as_string_or_die() == "IntroColorRectangle"){
+        return eRectangle(conf);
+    }
+    if(conf["General"]["type"].as_string_or_die() == "IntroBlocks"){
+        return eBlocks(conf);
+    }
+
+
 }
+
 
 int main(int argc, char const* argv[])
 {
