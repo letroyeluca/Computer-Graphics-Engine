@@ -24,12 +24,26 @@ img::EasyImage eRectangle(const ini::Configuration &conf){
 img::EasyImage eBlocks(const ini::Configuration &conf){
     int width = (conf["ImageProperties"]["width"].as_int_or_die());
     int height = (conf["ImageProperties"]["height"].as_int_or_die());
+    int nrXBlocks = (conf["BlockProperties"]["nrXBlocks"].as_int_or_die());
+    int nrYBlocks = (conf["BlockProperties"]["nrYBlocks"].as_int_or_die());
+    std::vector<double> colorA = (conf["BlockProperties"]["colorWhite"].as_double_tuple_or_die());
+    std::vector<double> colorB = (conf["BlockProperties"]["colorBlack"].as_double_tuple_or_die());
+    int modx = width/nrXBlocks;
+    int mody = height/nrYBlocks;
+
     img::EasyImage image(width,height);
     for(unsigned int i = 0; i < width; i++){
         for(unsigned int j = 0; j < height; j++){
-            image(i,j).red = i;
-            image(i,j).green = j;
-            image(i,j).blue = (i-j)%256;
+            if(((i/modx) + (j/mody))%2 == 0){
+                image(i,j).red = colorA[0];
+                image(i,j).green = colorA[1];
+                image(i,j).blue = colorA[2];
+            }else{
+                image(i,j).red = colorB[0];
+                image(i,j).green = colorB[1];
+                image(i,j).blue = colorB[2];
+            }
+
         }
     }
     return image;
@@ -39,7 +53,7 @@ img::EasyImage eBlocks(const ini::Configuration &conf){
 img::EasyImage generate_image(const ini::Configuration &configuration)
 {
     // choose ini file
-    std::ifstream fin("Intro1_ColorRectangle.ini");
+    std::ifstream fin("Intro2_Blocks.ini");
     ini::Configuration conf(fin);
 
     if(conf["General"]["type"].as_string_or_die() == "IntroColorRectangle"){
