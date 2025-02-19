@@ -18,6 +18,12 @@ set(engine_sources
 	easy_image.cc
 	engine.cc
 	ini_configuration.cc
+		l_parser.cc
+		Point2D.cpp
+		Point2D.h
+		Line2D.cpp
+		Line2D.h
+
 )
 
 ############################################################

@@ -105,11 +105,53 @@ CMakeFiles/engine.dir/ini_configuration.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/engine.dir/ini_configuration.cc.s"
 	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/ini_configuration.cc -o CMakeFiles/engine.dir/ini_configuration.cc.s
 
+CMakeFiles/engine.dir/l_parser.cc.o: CMakeFiles/engine.dir/flags.make
+CMakeFiles/engine.dir/l_parser.cc.o: /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/l_parser.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/engine.dir/l_parser.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/l_parser.cc.o -c /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/l_parser.cc
+
+CMakeFiles/engine.dir/l_parser.cc.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/engine.dir/l_parser.cc.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/l_parser.cc > CMakeFiles/engine.dir/l_parser.cc.i
+
+CMakeFiles/engine.dir/l_parser.cc.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/engine.dir/l_parser.cc.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/l_parser.cc -o CMakeFiles/engine.dir/l_parser.cc.s
+
+CMakeFiles/engine.dir/Point2D.cpp.o: CMakeFiles/engine.dir/flags.make
+CMakeFiles/engine.dir/Point2D.cpp.o: /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/Point2D.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/engine.dir/Point2D.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/Point2D.cpp.o -c /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/Point2D.cpp
+
+CMakeFiles/engine.dir/Point2D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/engine.dir/Point2D.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/Point2D.cpp > CMakeFiles/engine.dir/Point2D.cpp.i
+
+CMakeFiles/engine.dir/Point2D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Point2D.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/Point2D.cpp -o CMakeFiles/engine.dir/Point2D.cpp.s
+
+CMakeFiles/engine.dir/Line2D.cpp.o: CMakeFiles/engine.dir/flags.make
+CMakeFiles/engine.dir/Line2D.cpp.o: /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/Line2D.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object CMakeFiles/engine.dir/Line2D.cpp.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/Line2D.cpp.o -c /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/Line2D.cpp
+
+CMakeFiles/engine.dir/Line2D.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/engine.dir/Line2D.cpp.i"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/Line2D.cpp > CMakeFiles/engine.dir/Line2D.cpp.i
+
+CMakeFiles/engine.dir/Line2D.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/engine.dir/Line2D.cpp.s"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/Line2D.cpp -o CMakeFiles/engine.dir/Line2D.cpp.s
+
 # Object files for target engine
 engine_OBJECTS = \
 "CMakeFiles/engine.dir/easy_image.cc.o" \
 "CMakeFiles/engine.dir/engine.cc.o" \
-"CMakeFiles/engine.dir/ini_configuration.cc.o"
+"CMakeFiles/engine.dir/ini_configuration.cc.o" \
+"CMakeFiles/engine.dir/l_parser.cc.o" \
+"CMakeFiles/engine.dir/Point2D.cpp.o" \
+"CMakeFiles/engine.dir/Line2D.cpp.o"
 
 # External object files for target engine
 engine_EXTERNAL_OBJECTS =
@@ -117,9 +159,12 @@ engine_EXTERNAL_OBJECTS =
 engine: CMakeFiles/engine.dir/easy_image.cc.o
 engine: CMakeFiles/engine.dir/engine.cc.o
 engine: CMakeFiles/engine.dir/ini_configuration.cc.o
+engine: CMakeFiles/engine.dir/l_parser.cc.o
+engine: CMakeFiles/engine.dir/Point2D.cpp.o
+engine: CMakeFiles/engine.dir/Line2D.cpp.o
 engine: CMakeFiles/engine.dir/build.make
 engine: CMakeFiles/engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable engine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/engine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

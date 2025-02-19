@@ -16,11 +16,13 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  */
 #include "easy_image.h"
+#include "Line2D.h"
 #include <algorithm>
 #include <assert.h>
 #include <math.h>
 #include <iostream>
 #include <sstream>
+
 
 #ifndef le32toh
 #define le32toh(x) (x)
@@ -123,7 +125,24 @@ img::Color::Color(uint8_t r, uint8_t g, uint8_t b) :
 img::Color::~Color()
 {
 }
+static img::EasyImage draw2DLines(const std::vector<Line2D> &lines,const int size){
+    double Xmin = lines[0].p1.x;
+    double Xmax = Xmin;
+    double Ymin = lines[0].p1.y;
+    double Ymax = Ymin;
 
+    for(int i = 0; i < lines.size(); i += 1) {
+        Xmin = std::min({Xmin, lines[i].p1.x, lines[i].p2.x});
+        Xmax = std::max({Xmax, lines[i].p1.x, lines[i].p2.x});
+        Ymin = std::min({Ymin, lines[i].p1.y, lines[i].p2.y});
+        Ymax = std::max({Ymax, lines[i].p1.y, lines[i].p2.y});
+    }
+
+    double Yrange = std::abs(Ymax - Ymin);
+    double Xrange = std::abs(Xmax - Xmin);
+
+
+}
 img::UnsupportedFileTypeException::UnsupportedFileTypeException(std::string const& msg) :
 	message(msg)
 {

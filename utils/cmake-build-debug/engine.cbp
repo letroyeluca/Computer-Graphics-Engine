@@ -118,6 +118,18 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/Line2D.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/Line2D.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/Point2D.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/Point2D.h">
+			<Option target="engine"/>
+		</Unit>
 		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/easy_image.cc">
 			<Option target="engine"/>
 		</Unit>
@@ -131,6 +143,12 @@
 			<Option target="engine"/>
 		</Unit>
 		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/ini_configuration.h">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/l_parser.cc">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/l_parser.h">
 			<Option target="engine"/>
 		</Unit>
 		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/CMakeLists.txt">

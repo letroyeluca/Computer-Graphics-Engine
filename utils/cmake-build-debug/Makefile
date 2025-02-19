@@ -174,6 +174,54 @@ engine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/build
 .PHONY : engine/fast
 
+Line2D.o: Line2D.cpp.o
+.PHONY : Line2D.o
+
+# target to build an object file
+Line2D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Line2D.cpp.o
+.PHONY : Line2D.cpp.o
+
+Line2D.i: Line2D.cpp.i
+.PHONY : Line2D.i
+
+# target to preprocess a source file
+Line2D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Line2D.cpp.i
+.PHONY : Line2D.cpp.i
+
+Line2D.s: Line2D.cpp.s
+.PHONY : Line2D.s
+
+# target to generate assembly for a file
+Line2D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Line2D.cpp.s
+.PHONY : Line2D.cpp.s
+
+Point2D.o: Point2D.cpp.o
+.PHONY : Point2D.o
+
+# target to build an object file
+Point2D.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Point2D.cpp.o
+.PHONY : Point2D.cpp.o
+
+Point2D.i: Point2D.cpp.i
+.PHONY : Point2D.i
+
+# target to preprocess a source file
+Point2D.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Point2D.cpp.i
+.PHONY : Point2D.cpp.i
+
+Point2D.s: Point2D.cpp.s
+.PHONY : Point2D.s
+
+# target to generate assembly for a file
+Point2D.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Point2D.cpp.s
+.PHONY : Point2D.cpp.s
+
 easy_image.o: easy_image.cc.o
 .PHONY : easy_image.o
 
@@ -246,6 +294,30 @@ ini_configuration.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/ini_configuration.cc.s
 .PHONY : ini_configuration.cc.s
 
+l_parser.o: l_parser.cc.o
+.PHONY : l_parser.o
+
+# target to build an object file
+l_parser.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/l_parser.cc.o
+.PHONY : l_parser.cc.o
+
+l_parser.i: l_parser.cc.i
+.PHONY : l_parser.i
+
+# target to preprocess a source file
+l_parser.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/l_parser.cc.i
+.PHONY : l_parser.cc.i
+
+l_parser.s: l_parser.cc.s
+.PHONY : l_parser.s
+
+# target to generate assembly for a file
+l_parser.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/l_parser.cc.s
+.PHONY : l_parser.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -259,6 +331,12 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... engine"
+	@echo "... Line2D.o"
+	@echo "... Line2D.i"
+	@echo "... Line2D.s"
+	@echo "... Point2D.o"
+	@echo "... Point2D.i"
+	@echo "... Point2D.s"
 	@echo "... easy_image.o"
 	@echo "... easy_image.i"
 	@echo "... easy_image.s"
@@ -268,6 +346,9 @@ help:
 	@echo "... ini_configuration.o"
 	@echo "... ini_configuration.i"
 	@echo "... ini_configuration.s"
+	@echo "... l_parser.o"
+	@echo "... l_parser.i"
+	@echo "... l_parser.s"
 .PHONY : help
 
 

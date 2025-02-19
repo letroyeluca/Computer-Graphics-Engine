@@ -1,5 +1,6 @@
 #include "easy_image.h"
 #include "ini_configuration.h"
+#include "l_parser.h"
 
 #include <fstream>
 #include <iostream>
@@ -30,18 +31,18 @@ img::EasyImage eBlocks(const ini::Configuration &conf){
     std::vector<double> colorB = (conf["BlockProperties"]["colorBlack"].as_double_tuple_or_die());
     int modx = width/nrXBlocks;
     int mody = height/nrYBlocks;
-
     img::EasyImage image(width,height);
+
     for(unsigned int i = 0; i < width; i++){
         for(unsigned int j = 0; j < height; j++){
             if(((i/modx) + (j/mody))%2 == 0){
-                image(i,j).red = colorA[0];
-                image(i,j).green = colorA[1];
-                image(i,j).blue = colorA[2];
+                image(i,j).red = std::lround(colorA[0]*255);
+                image(i,j).green = std::lround(colorA[1]*255);
+                image(i,j).blue = std::lround(colorA[2]*255);
             }else{
-                image(i,j).red = colorB[0];
-                image(i,j).green = colorB[1];
-                image(i,j).blue = colorB[2];
+                image(i,j).red = std::lround(colorB[0]*255);
+                image(i,j).green = std::lround(colorB[1]*255);
+                image(i,j).blue = std::lround(colorB[2]*255);
             }
 
         }
@@ -49,19 +50,44 @@ img::EasyImage eBlocks(const ini::Configuration &conf){
     return image;
 }
 
+img::EasyImage eL2D(const ini::Configuration &conf){
 
-img::EasyImage generate_image(const ini::Configuration &configuration)
+    int width = (conf["General"]["size"].as_int_or_die());
+    int height = (conf["General"]["size"].as_int_or_die());
+    std::vector<double> backgroundColor = (conf["General"]["backgroundcolor"].as_double_tuple_or_die());
+    std::vector<double> lineColor = (conf["2DLSystem"]["color"].as_double_tuple_or_die());
+    std::string L2DFileName = (conf["2DLSystem"]["inputfile"].as_string_or_die());
+    LParser::LSystem2D LPARSER;
+    std::ifstream L2DFile(L2DFileName);
+    L2DFile >> LPARSER;
+    img::EasyImage image(width,height);
+    L2DFile.close();
+
+    for(unsigned int i = 0; i < width; i++){
+        for(unsigned int j = 0; j < height; j++){
+
+
+        }
+    }
+    return image;
+}
+
+img::EasyImage generate_image(const ini::Configuration &conf)
 {
-    // choose ini file
-    std::ifstream fin("Intro2_Blocks.ini");
-    ini::Configuration conf(fin);
 
     if(conf["General"]["type"].as_string_or_die() == "IntroColorRectangle"){
+
         return eRectangle(conf);
     }
-    if(conf["General"]["type"].as_string_or_die() == "IntroBlocks"){
+    else if(conf["General"]["type"].as_string_or_die() == "IntroBlocks"){
         return eBlocks(conf);
     }
+    else if(conf["General"]["type"].as_string_or_die() == "2DLSystem"){
+        return eL2D(conf);
+    }else{
+        return img::EasyImage(0, 0);
+    }
+
 
 
 }
@@ -118,6 +144,7 @@ int main(int argc, char const* argv[])
                                 {
                                         std::ofstream f_out(fileName.c_str(),std::ios::trunc | std::ios::out | std::ios::binary);
                                         f_out << image;
+                                        std::cout << "\033[32mGenerated image: " << fileName << "[0m" << std::endl;
 
                                 }
                                 catch(std::exception& ex)
@@ -128,7 +155,7 @@ int main(int argc, char const* argv[])
                         }
                         else
                         {
-                                std::cout << "Could not generate image for " << fileName << std::endl;
+                                std::cerr << "Could not generate image for " << fileName << std::endl;
                         }
                 }
         }

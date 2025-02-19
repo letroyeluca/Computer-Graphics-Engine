@@ -19,6 +19,8 @@ easy_image.h
 /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/easy_image.h
 ini_configuration.h
 /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/ini_configuration.h
+l_parser.h
+/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/l_parser.h
 fstream
 -
 iostream
@@ -38,5 +40,15 @@ stdexcept
 string
 -
 vector
+-
+
+/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/l_parser.h
+map
+-
+string
+-
+set
+-
+exception
 -
 

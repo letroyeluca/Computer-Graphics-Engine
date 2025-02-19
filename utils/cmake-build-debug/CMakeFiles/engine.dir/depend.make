@@ -7,7 +7,11 @@ CMakeFiles/engine.dir/easy_image.cc.o: \
 CMakeFiles/engine.dir/engine.cc.o: \
  /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/easy_image.h \
  /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/engine.cc \
- /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/ini_configuration.h
+ /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/ini_configuration.h \
+ /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/l_parser.h
 CMakeFiles/engine.dir/ini_configuration.cc.o: \
  /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/ini_configuration.cc \
  /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/ini_configuration.h
+CMakeFiles/engine.dir/l_parser.cc.o: \
+ /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/l_parser.cc \
+ /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/l_parser.h
