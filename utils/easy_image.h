@@ -20,6 +20,7 @@
 #include <stdint.h>
 #include <vector>
 #include <iostream>
+
 /**
  * \brief The namespace of the EasyImage class
  */
@@ -70,8 +71,21 @@ namespace img
 			 */
 			~Color();
 	};
+    class Point2D {
+    public:
+        double x;
+        double y;
+    };
 
-	/**
+    class Line2D {
+    public:
+        Point2D p1;
+        Point2D p2;
+        img::Color color;
+    };
+
+
+    /**
 	 * \brief The exception that is thrown when an error occurs while trying to read an img::EasyImage from an input stream
 	 */
 	class UnsupportedFileTypeException: public std::exception
@@ -196,6 +210,8 @@ namespace img
 			 */
 			Color const& operator()(unsigned int x, unsigned int y) const;
 
+
+
 			/**
 			 * \brief Fills the image with a background of a specified color. Defaults to black
 			 *
@@ -219,7 +235,7 @@ namespace img
 			 * 	assert(y1 < getHeight())
 			 */
 			void draw_line(unsigned int x0, unsigned int y0, unsigned int x1, unsigned int y1, Color color);
-
+            static img::EasyImage draw2DLines(const std::vector<Line2D> &lines,const int width,const int height, img::Color bgcolor);
 		private:
 			friend std::istream& operator>>(std::istream& in, EasyImage & image);
 			/**

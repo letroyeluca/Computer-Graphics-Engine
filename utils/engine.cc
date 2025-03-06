@@ -1,12 +1,12 @@
 #include "easy_image.h"
+
 #include "ini_configuration.h"
 #include "l_parser.h"
-
 #include <fstream>
 #include <iostream>
 #include <stdexcept>
 #include <string>
-
+#include <cmath>
 
 img::EasyImage eRectangle(const ini::Configuration &conf){
         int width = (conf["ImageProperties"]["width"].as_int_or_die());
@@ -51,26 +51,130 @@ img::EasyImage eBlocks(const ini::Configuration &conf){
 }
 
 img::EasyImage eL2D(const ini::Configuration &conf){
-
     int width = (conf["General"]["size"].as_int_or_die());
     int height = (conf["General"]["size"].as_int_or_die());
     std::vector<double> backgroundColor = (conf["General"]["backgroundcolor"].as_double_tuple_or_die());
     std::vector<double> lineColor = (conf["2DLSystem"]["color"].as_double_tuple_or_die());
     std::string L2DFileName = (conf["2DLSystem"]["inputfile"].as_string_or_die());
+    img::Color bgColor(std::lround(backgroundColor[0]*255),std::lround(backgroundColor[1]*255),std::lround(backgroundColor[2]*255));
+    img::Color drawColor(std::lround(lineColor[0]*255),std::lround(lineColor[1]*255),std::lround(lineColor[2]*255));
+    //
+    //laad de L2D file in en slaag die op in LPARSER
+    //
     LParser::LSystem2D LPARSER;
     std::ifstream L2DFile(L2DFileName);
     L2DFile >> LPARSER;
     img::EasyImage image(width,height);
     L2DFile.close();
 
-    for(unsigned int i = 0; i < width; i++){
-        for(unsigned int j = 0; j < height; j++){
+    //
+    //haal het alphabet
+    //
+    std::set<char> alphabet = LPARSER.get_alphabet();
 
+    //
+    //main loop
+    //
+    std::string mainstring = LPARSER.get_initiator();
+    std::string tempstring;
+    for(int i = 0; i < LPARSER.get_nr_iterations(); i++){
+        tempstring = "";
+        for(char c: mainstring)
+        {
+            if(alphabet.find(c) != alphabet.end()){
+                tempstring += LPARSER.get_replacement(c);
+            }else{
+                tempstring += c;
+            }
+        }
+        mainstring = tempstring;
+    }
+    double currentX = 0;
+    double currentY = 0;
+    double nextX = 0;
+    double nextY = 0;
+    double currentAngle = LPARSER.get_starting_angle() * (M_PI / 180);
+    double angle = LPARSER.get_angle() * (M_PI / 180);
+    std::vector<img::Line2D> lines;
+    std::stack<double> postionX;
+    std::stack<double> postionY;
+    std::stack<double> angleStack;
+    for(char c: mainstring){
+        if(alphabet.find(c) != alphabet.end()){
+            if(LPARSER.draw(c) != false){
+                nextX = currentX + LPARSER.draw(c) * cos(currentAngle);
+                nextY = currentY + LPARSER.draw(c) * sin(currentAngle);
+                img::Line2D newLine;
+                newLine.p1.x = currentX;
+                newLine.p1.y = currentY;
+                newLine.p2.x = nextX;
+                newLine.p2.y = nextY;
+                newLine.color = drawColor;
+                lines.push_back(newLine);
+                currentX = nextX;
+                currentY = nextY;
+            }else{
+                currentX = currentX + LPARSER.draw(c) * cos(currentAngle);
+                currentY = currentY + LPARSER.draw(c) * sin(currentAngle);
+            }
 
         }
+        if(c == '+'){
+            currentAngle += angle;
+        }
+        else if(c == '-'){
+            currentAngle -= angle;
+        } else if(c == '('){
+            postionX.push(currentX);
+            postionY.push(currentY);
+            angleStack.push(currentAngle);
+        }else if(c == ')'){
+            currentX = postionX.top();
+            currentY = postionY.top();
+            currentAngle = angleStack.top();
+            postionX.pop();
+            postionY.pop();
+            angleStack.pop();
+        }
+
+
     }
-    return image;
+    return img::EasyImage::draw2DLines(lines, width, height, bgColor);
+
+
+    //
+    //return the image
+    //
+
 }
+
+img::EasyImage eL2DST(const ini::Configuration &conf){
+    int width = (conf["General"]["size"].as_int_or_die());
+    int height = (conf["General"]["size"].as_int_or_die());
+    std::vector<double> backgroundColor = (conf["General"]["backgroundcolor"].as_double_tuple_or_die());
+    std::vector<double> lineColor = (conf["2DLSystem"]["color"].as_double_tuple_or_die());
+    std::string L2DFileName = (conf["2DLSystem"]["inputfile"].as_string_or_die());
+    img::Color bgColor(std::lround(backgroundColor[0]*255),std::lround(backgroundColor[1]*255),std::lround(backgroundColor[2]*255));
+    img::Color drawColor(std::lround(lineColor[0]*255),std::lround(lineColor[1]*255),std::lround(lineColor[2]*255));
+    //
+    //laad de L2D file in en slaag die op in LPARSER
+    //
+    LParser::LSystem2D LPARSER;
+    std::ifstream L2DFile(L2DFileName);
+    L2DFile >> LPARSER;
+    img::EasyImage image(width,height);
+    L2DFile.close();
+
+    LPARSER.get_replacement('A');
+    return image;
+
+
+    //
+    //return the image
+    //
+
+}
+
 
 img::EasyImage generate_image(const ini::Configuration &conf)
 {
@@ -84,10 +188,14 @@ img::EasyImage generate_image(const ini::Configuration &conf)
     }
     else if(conf["General"]["type"].as_string_or_die() == "2DLSystem"){
         return eL2D(conf);
-    }else{
-        return img::EasyImage(0, 0);
     }
+    else if(conf["General"]["type"].as_string_or_die() == "2DLSystemST"){
+        return eL2DST(conf);
+    }else{
 
+        img::EasyImage image;
+        return image;
+    }
 
 
 }
