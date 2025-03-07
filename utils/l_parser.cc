@@ -342,6 +342,7 @@ namespace
 		}
 		return num_parenthesis == 0;
 	}
+    // Modify the parse_rules function to handle stochastic rules with braces
     void parse_rules(std::set<char> const& alphabet, std::map<char, std::vector<std::tuple<double, std::string>>>& rules, stream_parser& parser, bool parse2D)
     {
         parser.skip_comments_and_whitespace();
@@ -366,6 +367,14 @@ namespace
             parser.assertChars("->");
             parser.skip_comments_and_whitespace();
 
+            // Check if we have a brace indicating multiple rules with probabilities
+            bool has_braces = false;
+            if (parser.peekChar() == '{') {
+                parser.getChar(); // consume the opening brace
+                has_braces = true;
+                parser.skip_comments_and_whitespace();
+            }
+
             // Handle multiple rules with probabilities
             std::vector<std::tuple<double, std::string>> replacements;
 
@@ -376,28 +385,38 @@ namespace
                     throw LParser::ParserException(std::string("Invalid rule specification for entry '") + alphabet_char + "' in rule specification", parser.getLine(), parser.getCol());
 
                 parser.skip_comments_and_whitespace();
-                parser.assertChars(":");
-                parser.skip_comments_and_whitespace();
 
-                // Read the probability
-                std::string prob_str;
-                while (std::isdigit(parser.peekChar()) || parser.peekChar() == '.')
-                {
-                    prob_str += parser.getChar();
+                // Check if there's a colon (for probability) - MODIFIED HERE
+                double probability = 1.0;  // Default probability if no colon is found
+                if (parser.peekChar() == ':') {
+                    parser.getChar();  // consume the colon
+                    parser.skip_comments_and_whitespace();
+
+                    // Read the probability
+                    std::string prob_str;
+                    while (std::isdigit(parser.peekChar()) || parser.peekChar() == '.')
+                    {
+                        prob_str += parser.getChar();
+                    }
+
+                    if (!prob_str.empty()) {
+                        probability = std::stod(prob_str);
+                    }
                 }
-
-                if (prob_str.empty())
-                    throw LParser::ParserException("Expected probability value", parser.getLine(), parser.getCol());
-
-                double probability = std::stod(prob_str);
 
                 // Add rule with probability to replacements
                 replacements.push_back(std::make_tuple(probability, rule));
 
                 parser.skip_comments_and_whitespace();
 
+                // Check if we have a closing brace (if we had an opening one)
+                if (has_braces && parser.peekChar() == '}') {
+                    parser.getChar(); // consume the closing brace
+                    break;
+                }
+
                 // Check if there are more rules for this character
-                if (parser.peekChar() != ',')
+                if (!has_braces || parser.peekChar() != ',')
                     break;
 
                 // Consume the comma and move to the next rule
@@ -420,21 +439,24 @@ namespace
         }
 
         // Validate that probabilities for each character sum to approximately 1.0
+        // Only check this if there are multiple rules for a character
         for (const auto& rule_pair : rules)
         {
-            double sum = 0.0;
-            for (const auto& rule_tuple : rule_pair.second)
-            {
-                sum += std::get<0>(rule_tuple);
-            }
+            if (rule_pair.second.size() > 1) {
+                double sum = 0.0;
+                for (const auto& rule_tuple : rule_pair.second)
+                {
+                    sum += std::get<0>(rule_tuple);
+                }
 
-            // Allow for small floating-point error
-            if (std::abs(sum - 1.0) > 0.001)
-            {
-                throw LParser::ParserException(
-                        std::string("Probabilities for character '") + rule_pair.first +
-                        "' sum to " + std::to_string(sum) + " but should sum to 1.0",
-                        parser.getLine(), parser.getCol());
+                // Allow for small floating-point error
+                if (std::abs(sum - 1.0) > 0.001)
+                {
+                    throw LParser::ParserException(
+                            std::string("Probabilities for character '") + rule_pair.first +
+                            "' sum to " + std::to_string(sum) + " but should sum to 1.0",
+                            parser.getLine(), parser.getCol());
+                }
             }
         }
     }

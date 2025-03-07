@@ -1,14 +1,14 @@
 Alphabet = {F}
 
 Draw = {
-        F -> 1
+    F -> 1
 }
 
 Rules = {
-    F -> {"-F+F-F-F+F+FF-F+F+FF+F-F-FF+FF-FF+F+F-FF-F-F+FF-F-F+F+F-F+":0.6, "-F+F-F-F+F+FF-F+F+FF+F-F-FF+FF-FF+F+F-FF-F-F+FF-F-F+F+F-F-":0.4}
+    F ->  { "F(+F)F(-F)F" : 0.33, "F(+F)F" : 0.33, "F(-F)F" : 0.34}
 }
 
 Initiator     = "F"
-Angle         = 90
-StartingAngle = 0
-Iterations    = 4
+Angle         = 25.7
+StartingAngle = 90
+Iterations    = 6
