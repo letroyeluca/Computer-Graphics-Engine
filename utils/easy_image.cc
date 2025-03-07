@@ -57,6 +57,7 @@ namespace
 			uint32_t ncolors;
 			uint32_t nimpcolors;
 	};
+
 	//copy-pasted from lparser.cc to allow these classes to be used independently from each other
 	class enable_exceptions
 	{

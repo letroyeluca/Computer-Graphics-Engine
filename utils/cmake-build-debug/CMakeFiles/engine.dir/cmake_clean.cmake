@@ -3,6 +3,7 @@ file(REMOVE_RECURSE
   "CMakeFiles/engine.dir/engine.cc.o"
   "CMakeFiles/engine.dir/ini_configuration.cc.o"
   "CMakeFiles/engine.dir/l_parser.cc.o"
+  "CMakeFiles/engine.dir/vector3d.cc.o"
   "engine"
   "engine.pdb"
 )

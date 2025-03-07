@@ -19,6 +19,7 @@ set(engine_sources
 	engine.cc
 	ini_configuration.cc
 		l_parser.cc
+		vector3d.cc
 
 
 )

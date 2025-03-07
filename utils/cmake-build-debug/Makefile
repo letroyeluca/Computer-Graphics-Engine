@@ -270,6 +270,30 @@ l_parser.cc.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/l_parser.cc.s
 .PHONY : l_parser.cc.s
 
+vector3d.o: vector3d.cc.o
+.PHONY : vector3d.o
+
+# target to build an object file
+vector3d.cc.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/vector3d.cc.o
+.PHONY : vector3d.cc.o
+
+vector3d.i: vector3d.cc.i
+.PHONY : vector3d.i
+
+# target to preprocess a source file
+vector3d.cc.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/vector3d.cc.i
+.PHONY : vector3d.cc.i
+
+vector3d.s: vector3d.cc.s
+.PHONY : vector3d.s
+
+# target to generate assembly for a file
+vector3d.cc.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/vector3d.cc.s
+.PHONY : vector3d.cc.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -295,6 +319,9 @@ help:
 	@echo "... l_parser.o"
 	@echo "... l_parser.i"
 	@echo "... l_parser.s"
+	@echo "... vector3d.o"
+	@echo "... vector3d.i"
+	@echo "... vector3d.s"
 .PHONY : help
 
 

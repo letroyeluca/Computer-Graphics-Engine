@@ -139,6 +139,12 @@
 		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/l_parser.h">
 			<Option target="engine"/>
 		</Unit>
+		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/vector3d.cc">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/vector3d.h">
+			<Option target="engine"/>
+		</Unit>
 		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
