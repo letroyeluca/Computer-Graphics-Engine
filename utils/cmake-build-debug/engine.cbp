@@ -8,18 +8,18 @@
 		<Option virtualFolders="CMake Files\;"/>
 		<Build>
 			<Target title="all">
-				<Option working_dir="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug"/>
+				<Option working_dir="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 all"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="engine">
-				<Option output="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/engine" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug"/>
+				<Option output="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/engine" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -31,15 +31,15 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 engine"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 engine"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="engine/fast">
-				<Option output="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/engine" prefix_auto="0" extension_auto="0"/>
-				<Option working_dir="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug"/>
+				<Option output="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/engine" prefix_auto="0" extension_auto="0"/>
+				<Option working_dir="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug"/>
 				<Option object_output="./"/>
 				<Option type="1"/>
 				<Option compiler="gcc"/>
@@ -51,101 +51,101 @@
 					<Add directory="/Library/Frameworks"/>
 				</Compiler>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 engine/fast"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 engine/fast"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="edit_cache">
-				<Option working_dir="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug"/>
+				<Option working_dir="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 edit_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="rebuild_cache">
-				<Option working_dir="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug"/>
+				<Option working_dir="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 rebuild_cache"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="list_install_components">
-				<Option working_dir="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug"/>
+				<Option working_dir="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 list_install_components"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install">
-				<Option working_dir="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug"/>
+				<Option working_dir="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 install"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/local">
-				<Option working_dir="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug"/>
+				<Option working_dir="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/local"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 			<Target title="install/strip">
-				<Option working_dir="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug"/>
+				<Option working_dir="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug"/>
 				<Option type="4"/>
 				<MakeCommands>
-					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
-					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
-					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
-					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<Build command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 install/strip"/>
+					<CompileFile command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 &quot;$file&quot;"/>
+					<Clean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
+					<DistClean command="/usr/bin/make -j8 -f &quot;/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/Makefile&quot;  VERBOSE=1 clean"/>
 				</MakeCommands>
 			</Target>
 		</Build>
-		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/easy_image.cc">
+		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/easy_image.cc">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/easy_image.h">
+		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/easy_image.h">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/engine.cc">
+		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/engine.cc">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/ini_configuration.cc">
+		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/ini_configuration.cc">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/ini_configuration.h">
+		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/ini_configuration.h">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/l_parser.cc">
+		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/l_parser.cc">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/l_parser.h">
+		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/l_parser.h">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/vector3d.cc">
+		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/vector3d.cc">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/vector3d.h">
+		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/vector3d.h">
 			<Option target="engine"/>
 		</Unit>
-		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/CMakeLists.txt">
+		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>
 	</Project>

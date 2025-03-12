@@ -148,6 +148,8 @@ img::EasyImage eL2D(const ini::Configuration &conf){
 
 }
 
+
+
 img::EasyImage eL2DST(const ini::Configuration &conf){
     int width = (conf["General"]["size"].as_int_or_die());
     int height = (conf["General"]["size"].as_int_or_die());
@@ -175,6 +177,70 @@ img::EasyImage eL2DST(const ini::Configuration &conf){
 
 }
 
+img::EasyImage WireFrame(const ini::Configuration &conf){
+    int width = (conf["General"]["size"].as_int_or_die());
+    int height = (conf["General"]["size"].as_int_or_die());
+    std::vector<double> backgroundColor = (conf["General"]["backgroundcolor"].as_double_tuple_or_die());
+    int numberOfFigures = (conf["General"]["nrFigures"].as_int_or_die());
+    std::vector<double> eye = (conf["General"]["eye"].as_double_tuple_or_die());
+    std::vector<img::Figure> figures;
+    for(int i = 0; i < numberOfFigures; i++){
+        auto figure = (conf["Figure" + std::to_string(i)]);
+        /*
+                rotateX = 0
+                rotateY = 0
+                rotateZ = 0
+                scale = 1.0
+                center = (0, 0, 0)
+                color = (0.0, 1.0, 0.0)
+                nrPoints = 14
+                nrLines = 28
+         */
+        int rorateXVal = figure["rotateX"].as_int_or_die();
+        int rorateYVal = figure["rotateY"].as_int_or_die();
+        int rorateZVal = figure["rotateZ"].as_int_or_die();
+        auto scaleVal = figure["scale"].as_double_or_die();
+        std::vector<double> color = (figure["color"].as_double_tuple_or_die());
+        std::vector<double> center = (figure["center"].as_double_tuple_or_die());
+        int nrPoints = figure["nrPoints"].as_int_or_die();
+        int nrLines = figure["nrLines"].as_int_or_die();
+        img::Figure newFigure;
+        newFigure.points = std::vector<Vector3D>();
+        newFigure.faces = std::vector<img::Face>();
+        newFigure.color = img::Color(std::lround(color[0]*255),std::lround(color[1]*255),std::lround(color[2]*255));
+
+        for(int j = 0; j < nrPoints; j++){
+            std::vector<double> point = (figure["point" + std::to_string(j)]);
+            Vector3D newPoint = Vector3D::point(point[0],point[1],point[2]);
+            newFigure.points.push_back(newPoint);
+        }
+
+        for(int j = 0; j < nrLines; j++){
+            std::vector<int> line = (figure["line" + std::to_string(j)]);
+            img::Face newFace;
+            newFace.point_indexes = line;
+            newFigure.faces.push_back(newFace);
+        }
+
+        Matrix transformMatrix = img::EasyImage::scaleFigure(scaleVal) * img::EasyImage::rotateX(rorateXVal) * img::EasyImage::rotateY(rorateYVal) * img::EasyImage::rotateZ(rorateZVal);
+        img::EasyImage::applyTransformation(newFigure, transformMatrix);
+
+
+        Matrix eyeMatrix = img::EasyImage::eyePointTrans(Vector3D::point(eye[0], eye[1], eye[2]));
+        img::EasyImage::applyTransformation(newFigure, eyeMatrix);
+
+        Matrix transMatrix =  img::EasyImage::translate(Vector3D::point(center[0],center[1],center[2]));
+        img::EasyImage::applyTransformation(newFigure, transMatrix);
+        figures.push_back(newFigure);
+    }
+
+
+
+    std::vector<img::Line2D> projectedLines = img::EasyImage::doProjection(figures);
+    return img::EasyImage::draw2DLines(projectedLines, width, height, img::Color(backgroundColor[0], backgroundColor[1], backgroundColor[2]));
+
+
+}
 
 img::EasyImage generate_image(const ini::Configuration &conf)
 {
@@ -191,6 +257,10 @@ img::EasyImage generate_image(const ini::Configuration &conf)
     }
     else if(conf["General"]["type"].as_string_or_die() == "2DLSystemST"){
         return eL2DST(conf);
+
+    }else if(conf["General"]["type"].as_string_or_die() == "Wireframe"){
+        return WireFrame(conf);
+
     }else{
 
         img::EasyImage image;
@@ -208,6 +278,9 @@ int main(int argc, char const* argv[])
         {
                 std::vector<std::string> args = std::vector<std::string>(argv+1, argv+argc);
                 if (args.empty()) {
+                        auto path = std::filesystem::current_path(); //getting path
+                        std::cout << path << std::endl;
+
                         std::ifstream fileIn("filelist");
                         std::string filelistName;
                         while (std::getline(fileIn, filelistName)) {
@@ -250,6 +323,7 @@ int main(int argc, char const* argv[])
                                 }
                                 try
                                 {
+                                        fileName = "../build/" + fileName;
                                         std::ofstream f_out(fileName.c_str(),std::ios::trunc | std::ios::out | std::ios::binary);
                                         f_out << image;
                                         std::cout << "\033[32mGenerated image: " << fileName << "[0m" << std::endl;

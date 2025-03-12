@@ -1,4 +1,4 @@
-/Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" -S /Users/lucaletroye/Documents/PROJECTEN/graphics/utils -B /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug
+/Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/cmake -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - Unix Makefiles" -S /Users/lucaletroye/Documents/PROJECTEN/CG/utils -B /Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug
 CMake Deprecation Warning:
   Support for "Extra Generators" like
 
@@ -10,4 +10,4 @@ CMake Deprecation Warning:
 
 -- Configuring done (0.1s)
 -- Generating done (0.0s)
--- Build files have been written to: /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug
+-- Build files have been written to: /Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug

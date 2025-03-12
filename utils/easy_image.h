@@ -96,7 +96,8 @@ namespace img
         std::vector<Face> faces;
         Color color;
     };
-    typedef std::list<img::Figure> Figures3D;
+
+
 
 
 
@@ -259,7 +260,8 @@ namespace img
             static Matrix translate(const Vector3D &vector);
             static void applyTransformation(Figure &fig, const Matrix &m);
             static Matrix eyePointTrans(const Vector3D &eyepoint);
-            static void applyTransformation(Figures3D &figs, const Matrix &m);
+            static std::vector<img::Line2D> doProjection(const std::vector<Figure> &figures);
+            static Point2D doProjection(const Vector3D &point,const double d);
 		private:
 			friend std::istream& operator>>(std::istream& in, EasyImage & image);
 			/**

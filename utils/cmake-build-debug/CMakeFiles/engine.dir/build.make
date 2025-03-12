@@ -53,10 +53,10 @@ RM = /Applications/CLion.app/Contents/bin/cmake/mac/x64/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/lucaletroye/Documents/PROJECTEN/graphics/utils
+CMAKE_SOURCE_DIR = /Users/lucaletroye/Documents/PROJECTEN/CG/utils
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug
+CMAKE_BINARY_DIR = /Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug
 
 # Include any dependencies generated for this target.
 include CMakeFiles/engine.dir/depend.make
@@ -67,69 +67,69 @@ include CMakeFiles/engine.dir/progress.make
 include CMakeFiles/engine.dir/flags.make
 
 CMakeFiles/engine.dir/easy_image.cc.o: CMakeFiles/engine.dir/flags.make
-CMakeFiles/engine.dir/easy_image.cc.o: /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/easy_image.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/engine.dir/easy_image.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/easy_image.cc.o -c /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/easy_image.cc
+CMakeFiles/engine.dir/easy_image.cc.o: /Users/lucaletroye/Documents/PROJECTEN/CG/utils/easy_image.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/engine.dir/easy_image.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/easy_image.cc.o -c /Users/lucaletroye/Documents/PROJECTEN/CG/utils/easy_image.cc
 
 CMakeFiles/engine.dir/easy_image.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/engine.dir/easy_image.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/easy_image.cc > CMakeFiles/engine.dir/easy_image.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucaletroye/Documents/PROJECTEN/CG/utils/easy_image.cc > CMakeFiles/engine.dir/easy_image.cc.i
 
 CMakeFiles/engine.dir/easy_image.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/engine.dir/easy_image.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/easy_image.cc -o CMakeFiles/engine.dir/easy_image.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucaletroye/Documents/PROJECTEN/CG/utils/easy_image.cc -o CMakeFiles/engine.dir/easy_image.cc.s
 
 CMakeFiles/engine.dir/engine.cc.o: CMakeFiles/engine.dir/flags.make
-CMakeFiles/engine.dir/engine.cc.o: /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/engine.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/engine.dir/engine.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/engine.cc.o -c /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/engine.cc
+CMakeFiles/engine.dir/engine.cc.o: /Users/lucaletroye/Documents/PROJECTEN/CG/utils/engine.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/engine.dir/engine.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/engine.cc.o -c /Users/lucaletroye/Documents/PROJECTEN/CG/utils/engine.cc
 
 CMakeFiles/engine.dir/engine.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/engine.dir/engine.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/engine.cc > CMakeFiles/engine.dir/engine.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucaletroye/Documents/PROJECTEN/CG/utils/engine.cc > CMakeFiles/engine.dir/engine.cc.i
 
 CMakeFiles/engine.dir/engine.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/engine.dir/engine.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/engine.cc -o CMakeFiles/engine.dir/engine.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucaletroye/Documents/PROJECTEN/CG/utils/engine.cc -o CMakeFiles/engine.dir/engine.cc.s
 
 CMakeFiles/engine.dir/ini_configuration.cc.o: CMakeFiles/engine.dir/flags.make
-CMakeFiles/engine.dir/ini_configuration.cc.o: /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/ini_configuration.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/engine.dir/ini_configuration.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/ini_configuration.cc.o -c /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/ini_configuration.cc
+CMakeFiles/engine.dir/ini_configuration.cc.o: /Users/lucaletroye/Documents/PROJECTEN/CG/utils/ini_configuration.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/engine.dir/ini_configuration.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/ini_configuration.cc.o -c /Users/lucaletroye/Documents/PROJECTEN/CG/utils/ini_configuration.cc
 
 CMakeFiles/engine.dir/ini_configuration.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/engine.dir/ini_configuration.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/ini_configuration.cc > CMakeFiles/engine.dir/ini_configuration.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucaletroye/Documents/PROJECTEN/CG/utils/ini_configuration.cc > CMakeFiles/engine.dir/ini_configuration.cc.i
 
 CMakeFiles/engine.dir/ini_configuration.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/engine.dir/ini_configuration.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/ini_configuration.cc -o CMakeFiles/engine.dir/ini_configuration.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucaletroye/Documents/PROJECTEN/CG/utils/ini_configuration.cc -o CMakeFiles/engine.dir/ini_configuration.cc.s
 
 CMakeFiles/engine.dir/l_parser.cc.o: CMakeFiles/engine.dir/flags.make
-CMakeFiles/engine.dir/l_parser.cc.o: /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/l_parser.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/engine.dir/l_parser.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/l_parser.cc.o -c /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/l_parser.cc
+CMakeFiles/engine.dir/l_parser.cc.o: /Users/lucaletroye/Documents/PROJECTEN/CG/utils/l_parser.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/engine.dir/l_parser.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/l_parser.cc.o -c /Users/lucaletroye/Documents/PROJECTEN/CG/utils/l_parser.cc
 
 CMakeFiles/engine.dir/l_parser.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/engine.dir/l_parser.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/l_parser.cc > CMakeFiles/engine.dir/l_parser.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucaletroye/Documents/PROJECTEN/CG/utils/l_parser.cc > CMakeFiles/engine.dir/l_parser.cc.i
 
 CMakeFiles/engine.dir/l_parser.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/engine.dir/l_parser.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/l_parser.cc -o CMakeFiles/engine.dir/l_parser.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucaletroye/Documents/PROJECTEN/CG/utils/l_parser.cc -o CMakeFiles/engine.dir/l_parser.cc.s
 
 CMakeFiles/engine.dir/vector3d.cc.o: CMakeFiles/engine.dir/flags.make
-CMakeFiles/engine.dir/vector3d.cc.o: /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/vector3d.cc
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/engine.dir/vector3d.cc.o"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/vector3d.cc.o -c /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/vector3d.cc
+CMakeFiles/engine.dir/vector3d.cc.o: /Users/lucaletroye/Documents/PROJECTEN/CG/utils/vector3d.cc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object CMakeFiles/engine.dir/vector3d.cc.o"
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/engine.dir/vector3d.cc.o -c /Users/lucaletroye/Documents/PROJECTEN/CG/utils/vector3d.cc
 
 CMakeFiles/engine.dir/vector3d.cc.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/engine.dir/vector3d.cc.i"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/vector3d.cc > CMakeFiles/engine.dir/vector3d.cc.i
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /Users/lucaletroye/Documents/PROJECTEN/CG/utils/vector3d.cc > CMakeFiles/engine.dir/vector3d.cc.i
 
 CMakeFiles/engine.dir/vector3d.cc.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/engine.dir/vector3d.cc.s"
-	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/vector3d.cc -o CMakeFiles/engine.dir/vector3d.cc.s
+	/Library/Developer/CommandLineTools/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /Users/lucaletroye/Documents/PROJECTEN/CG/utils/vector3d.cc -o CMakeFiles/engine.dir/vector3d.cc.s
 
 # Object files for target engine
 engine_OBJECTS = \
@@ -149,7 +149,7 @@ engine: CMakeFiles/engine.dir/l_parser.cc.o
 engine: CMakeFiles/engine.dir/vector3d.cc.o
 engine: CMakeFiles/engine.dir/build.make
 engine: CMakeFiles/engine.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable engine"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Linking CXX executable engine"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/engine.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -161,6 +161,6 @@ CMakeFiles/engine.dir/clean:
 .PHONY : CMakeFiles/engine.dir/clean
 
 CMakeFiles/engine.dir/depend:
-	cd /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lucaletroye/Documents/PROJECTEN/graphics/utils /Users/lucaletroye/Documents/PROJECTEN/graphics/utils /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug /Users/lucaletroye/Documents/PROJECTEN/graphics/utils/cmake-build-debug/CMakeFiles/engine.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /Users/lucaletroye/Documents/PROJECTEN/CG/utils /Users/lucaletroye/Documents/PROJECTEN/CG/utils /Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug /Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug /Users/lucaletroye/Documents/PROJECTEN/CG/utils/cmake-build-debug/CMakeFiles/engine.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/engine.dir/depend
 
