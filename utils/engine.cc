@@ -96,7 +96,7 @@ img::EasyImage eL2D(const ini::Configuration &conf){
     double nextY = 0;
     double currentAngle = LPARSER.get_starting_angle() * (M_PI / 180);
     double angle = LPARSER.get_angle() * (M_PI / 180);
-    std::vector<Line2D> lines;
+    std::vector<img::Line2D> lines;
     std::stack<double> postionX;
     std::stack<double> postionY;
     std::stack<double> angleStack;
@@ -105,7 +105,7 @@ img::EasyImage eL2D(const ini::Configuration &conf){
             if(LPARSER.draw(c) != false){
                 nextX = currentX + LPARSER.draw(c) * cos(currentAngle);
                 nextY = currentY + LPARSER.draw(c) * sin(currentAngle);
-                Line2D newLine;
+                img::Line2D newLine;
                 newLine.p1.x = currentX;
                 newLine.p1.y = currentY;
                 newLine.p2.x = nextX;
@@ -228,7 +228,7 @@ img::EasyImage WireFrame(const ini::Configuration &conf){
 
 
 
-    std::vector<Line2D> projectedLines = doProjection(figures);
+    std::vector<img::Line2D> projectedLines = doProjection(figures);
     return img::EasyImage::draw2DLines(projectedLines, width, height, img::Color(backgroundColor[0], backgroundColor[1], backgroundColor[2]));
 
 

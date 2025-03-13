@@ -9,24 +9,14 @@
 /Users/lucaletroye/Documents/PROJECTEN/CG/utils/Figure.cpp
 Figure.h
 /Users/lucaletroye/Documents/PROJECTEN/CG/utils/Figure.h
+easy_image.h
+/Users/lucaletroye/Documents/PROJECTEN/CG/utils/easy_image.h
 
 /Users/lucaletroye/Documents/PROJECTEN/CG/utils/Figure.h
 easy_image.h
 /Users/lucaletroye/Documents/PROJECTEN/CG/utils/easy_image.h
-
-/Users/lucaletroye/Documents/PROJECTEN/CG/utils/easy_image.cc
-easy_image.h
-/Users/lucaletroye/Documents/PROJECTEN/CG/utils/easy_image.h
-algorithm
--
-assert.h
--
-math.h
--
-iostream
--
-sstream
--
+vector3d.h
+/Users/lucaletroye/Documents/PROJECTEN/CG/utils/vector3d.h
 
 /Users/lucaletroye/Documents/PROJECTEN/CG/utils/easy_image.h
 stdint.h
@@ -35,12 +25,8 @@ vector
 -
 iostream
 -
-vector3d.h
-/Users/lucaletroye/Documents/PROJECTEN/CG/utils/vector3d.h
 list
 /Users/lucaletroye/Documents/PROJECTEN/CG/utils/list
-Figure.h
-/Users/lucaletroye/Documents/PROJECTEN/CG/utils/Figure.h
 
 /Users/lucaletroye/Documents/PROJECTEN/CG/utils/engine.cc
 easy_image.h

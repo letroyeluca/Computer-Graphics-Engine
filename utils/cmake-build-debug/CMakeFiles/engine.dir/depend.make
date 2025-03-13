@@ -7,10 +7,8 @@ CMakeFiles/engine.dir/Figure.cpp.o: \
  /Users/lucaletroye/Documents/PROJECTEN/CG/utils/easy_image.h \
  /Users/lucaletroye/Documents/PROJECTEN/CG/utils/vector3d.h
 CMakeFiles/engine.dir/easy_image.cc.o: \
- /Users/lucaletroye/Documents/PROJECTEN/CG/utils/Figure.h \
  /Users/lucaletroye/Documents/PROJECTEN/CG/utils/easy_image.cc \
- /Users/lucaletroye/Documents/PROJECTEN/CG/utils/easy_image.h \
- /Users/lucaletroye/Documents/PROJECTEN/CG/utils/vector3d.h
+ /Users/lucaletroye/Documents/PROJECTEN/CG/utils/easy_image.h
 CMakeFiles/engine.dir/engine.cc.o: \
  /Users/lucaletroye/Documents/PROJECTEN/CG/utils/Figure.h \
  /Users/lucaletroye/Documents/PROJECTEN/CG/utils/easy_image.h \

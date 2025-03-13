@@ -20,9 +20,9 @@
 #include <stdint.h>
 #include <vector>
 #include <iostream>
-#include "vector3d.h"
+//#include "vector3d.h"
 #include "list"
-#include "Figure.h"
+
 /**
  * \brief The namespace of the EasyImage class
  */
@@ -74,6 +74,18 @@ namespace img
 			~Color();
 	};
 
+    class Point2D {
+    public:
+        double x;
+        double y;
+    };
+
+    class Line2D {
+    public:
+        Point2D p1;
+        Point2D p2;
+        img::Color color;
+    };
 
 
 

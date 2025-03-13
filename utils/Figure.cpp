@@ -3,7 +3,7 @@
 //
 
 #include "Figure.h"
-
+#include "easy_image.h"
 
 Matrix scaleFigure(const double scale){
     Matrix matrix;
@@ -95,17 +95,17 @@ Matrix eyePointTrans(const Vector3D &eyepoint) {
     return matrix;
 }
 
-std::vector<Line2D> doProjection(const std::vector<Figure> &figures){
-    std::vector<Line2D> allLines;
+std::vector<img::Line2D> doProjection(const std::vector<Figure> &figures){
+    std::vector<img::Line2D> allLines;
 
     for (auto &fig : figures){
         for(auto &face: fig.faces){
             for(int i = 0; i < face.point_indexes.size(); i++){
                 Vector3D point1 = fig.points[face.point_indexes[i]];
                 Vector3D point2 = fig.points[face.point_indexes[(i+1)%face.point_indexes.size()]];
-                Point2D projectedPoint1 = doProjection(point1, 1);
-                Point2D projectedPoint2 = doProjection(point2, 1);
-                Line2D line;
+                img::Point2D projectedPoint1 = doProjection(point1, 1);
+                img::Point2D projectedPoint2 = doProjection(point2, 1);
+                img::Line2D line;
                 line.p1 = projectedPoint1;
                 line.p2 = projectedPoint2;
                 line.color = fig.color;
@@ -117,8 +117,8 @@ std::vector<Line2D> doProjection(const std::vector<Figure> &figures){
     return allLines;
 }
 
-Point2D doProjection(const Vector3D &point,const double d){
-    Point2D projectedPoint;
+img::Point2D doProjection(const Vector3D &point,const double d){
+    img::Point2D projectedPoint;
     projectedPoint.x = (d * point.x) / -point.z;
     projectedPoint.y = (d * point.y) / -point.z;
     return projectedPoint;
