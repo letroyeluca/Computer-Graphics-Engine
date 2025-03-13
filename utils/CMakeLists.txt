@@ -20,6 +20,8 @@ set(engine_sources
 	ini_configuration.cc
 		l_parser.cc
 		vector3d.cc
+		Figure.cpp
+		Figure.h
 
 
 )

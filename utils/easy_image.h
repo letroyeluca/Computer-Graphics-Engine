@@ -22,6 +22,7 @@
 #include <iostream>
 #include "vector3d.h"
 #include "list"
+#include "Figure.h"
 /**
  * \brief The namespace of the EasyImage class
  */
@@ -72,30 +73,6 @@ namespace img
 			 */
 			~Color();
 	};
-    class Point2D {
-    public:
-        double x;
-        double y;
-    };
-
-    class Line2D {
-    public:
-        Point2D p1;
-        Point2D p2;
-        img::Color color;
-    };
-
-
-    class Face{
-    public:
-        std::vector<int> point_indexes;
-    };
-    class Figure{
-    public:
-        std::vector<Vector3D> points;
-        std::vector<Face> faces;
-        Color color;
-    };
 
 
 
@@ -253,15 +230,7 @@ namespace img
 			 */
 			void draw_line(unsigned int x0, unsigned int y0, unsigned int x1, unsigned int y1, Color color);
             static img::EasyImage draw2DLines(const std::vector<Line2D> &lines,const int width,const int height, img::Color bgcolor);
-            static Matrix scaleFigure(const double scale);
-            static Matrix rotateX(const double angle);
-            static Matrix rotateY(const double angle);
-            static Matrix rotateZ(const double angle);
-            static Matrix translate(const Vector3D &vector);
-            static void applyTransformation(Figure &fig, const Matrix &m);
-            static Matrix eyePointTrans(const Vector3D &eyepoint);
-            static std::vector<img::Line2D> doProjection(const std::vector<Figure> &figures);
-            static Point2D doProjection(const Vector3D &point,const double d);
+
 		private:
 			friend std::istream& operator>>(std::istream& in, EasyImage & image);
 			/**

@@ -174,6 +174,30 @@ engine/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/build
 .PHONY : engine/fast
 
+Figure.o: Figure.cpp.o
+.PHONY : Figure.o
+
+# target to build an object file
+Figure.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Figure.cpp.o
+.PHONY : Figure.cpp.o
+
+Figure.i: Figure.cpp.i
+.PHONY : Figure.i
+
+# target to preprocess a source file
+Figure.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Figure.cpp.i
+.PHONY : Figure.cpp.i
+
+Figure.s: Figure.cpp.s
+.PHONY : Figure.s
+
+# target to generate assembly for a file
+Figure.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/engine.dir/build.make CMakeFiles/engine.dir/Figure.cpp.s
+.PHONY : Figure.cpp.s
+
 easy_image.o: easy_image.cc.o
 .PHONY : easy_image.o
 
@@ -307,6 +331,9 @@ help:
 	@echo "... list_install_components"
 	@echo "... rebuild_cache"
 	@echo "... engine"
+	@echo "... Figure.o"
+	@echo "... Figure.i"
+	@echo "... Figure.s"
 	@echo "... easy_image.o"
 	@echo "... easy_image.i"
 	@echo "... easy_image.s"

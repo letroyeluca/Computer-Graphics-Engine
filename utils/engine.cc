@@ -7,6 +7,7 @@
 #include <stdexcept>
 #include <string>
 #include <cmath>
+#include "Figure.h"
 
 img::EasyImage eRectangle(const ini::Configuration &conf){
         int width = (conf["ImageProperties"]["width"].as_int_or_die());
@@ -95,7 +96,7 @@ img::EasyImage eL2D(const ini::Configuration &conf){
     double nextY = 0;
     double currentAngle = LPARSER.get_starting_angle() * (M_PI / 180);
     double angle = LPARSER.get_angle() * (M_PI / 180);
-    std::vector<img::Line2D> lines;
+    std::vector<Line2D> lines;
     std::stack<double> postionX;
     std::stack<double> postionY;
     std::stack<double> angleStack;
@@ -104,7 +105,7 @@ img::EasyImage eL2D(const ini::Configuration &conf){
             if(LPARSER.draw(c) != false){
                 nextX = currentX + LPARSER.draw(c) * cos(currentAngle);
                 nextY = currentY + LPARSER.draw(c) * sin(currentAngle);
-                img::Line2D newLine;
+                Line2D newLine;
                 newLine.p1.x = currentX;
                 newLine.p1.y = currentY;
                 newLine.p2.x = nextX;
@@ -183,19 +184,10 @@ img::EasyImage WireFrame(const ini::Configuration &conf){
     std::vector<double> backgroundColor = (conf["General"]["backgroundcolor"].as_double_tuple_or_die());
     int numberOfFigures = (conf["General"]["nrFigures"].as_int_or_die());
     std::vector<double> eye = (conf["General"]["eye"].as_double_tuple_or_die());
-    std::vector<img::Figure> figures;
+    std::vector<Figure> figures;
     for(int i = 0; i < numberOfFigures; i++){
         auto figure = (conf["Figure" + std::to_string(i)]);
-        /*
-                rotateX = 0
-                rotateY = 0
-                rotateZ = 0
-                scale = 1.0
-                center = (0, 0, 0)
-                color = (0.0, 1.0, 0.0)
-                nrPoints = 14
-                nrLines = 28
-         */
+
         int rorateXVal = figure["rotateX"].as_int_or_die();
         int rorateYVal = figure["rotateY"].as_int_or_die();
         int rorateZVal = figure["rotateZ"].as_int_or_die();
@@ -204,9 +196,9 @@ img::EasyImage WireFrame(const ini::Configuration &conf){
         std::vector<double> center = (figure["center"].as_double_tuple_or_die());
         int nrPoints = figure["nrPoints"].as_int_or_die();
         int nrLines = figure["nrLines"].as_int_or_die();
-        img::Figure newFigure;
+        Figure newFigure;
         newFigure.points = std::vector<Vector3D>();
-        newFigure.faces = std::vector<img::Face>();
+        newFigure.faces = std::vector<Face>();
         newFigure.color = img::Color(std::lround(color[0]*255),std::lround(color[1]*255),std::lround(color[2]*255));
 
         for(int j = 0; j < nrPoints; j++){
@@ -217,26 +209,26 @@ img::EasyImage WireFrame(const ini::Configuration &conf){
 
         for(int j = 0; j < nrLines; j++){
             std::vector<int> line = (figure["line" + std::to_string(j)]);
-            img::Face newFace;
+            Face newFace;
             newFace.point_indexes = line;
             newFigure.faces.push_back(newFace);
         }
 
-        Matrix transformMatrix = img::EasyImage::scaleFigure(scaleVal) * img::EasyImage::rotateX(rorateXVal) * img::EasyImage::rotateY(rorateYVal) * img::EasyImage::rotateZ(rorateZVal);
-        img::EasyImage::applyTransformation(newFigure, transformMatrix);
+        Matrix transformMatrix = scaleFigure(scaleVal) * rotateX(rorateXVal) * rotateY(rorateYVal) * rotateZ(rorateZVal);
+        applyTransformation(newFigure, transformMatrix);
 
 
-        Matrix eyeMatrix = img::EasyImage::eyePointTrans(Vector3D::point(eye[0], eye[1], eye[2]));
-        img::EasyImage::applyTransformation(newFigure, eyeMatrix);
+        Matrix eyeMatrix = eyePointTrans(Vector3D::point(eye[0], eye[1], eye[2]));
+        applyTransformation(newFigure, eyeMatrix);
 
-        Matrix transMatrix =  img::EasyImage::translate(Vector3D::point(center[0],center[1],center[2]));
-        img::EasyImage::applyTransformation(newFigure, transMatrix);
+        Matrix transMatrix =  translate(Vector3D::point(center[0],center[1],center[2]));
+        applyTransformation(newFigure, transMatrix);
         figures.push_back(newFigure);
     }
 
 
 
-    std::vector<img::Line2D> projectedLines = img::EasyImage::doProjection(figures);
+    std::vector<Line2D> projectedLines = doProjection(figures);
     return img::EasyImage::draw2DLines(projectedLines, width, height, img::Color(backgroundColor[0], backgroundColor[1], backgroundColor[2]));
 
 

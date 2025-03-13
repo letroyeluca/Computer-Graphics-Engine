@@ -118,6 +118,12 @@
 				</MakeCommands>
 			</Target>
 		</Build>
+		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/Figure.cpp">
+			<Option target="engine"/>
+		</Unit>
+		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/Figure.h">
+			<Option target="engine"/>
+		</Unit>
 		<Unit filename="/Users/lucaletroye/Documents/PROJECTEN/CG/utils/easy_image.cc">
 			<Option target="engine"/>
 		</Unit>
